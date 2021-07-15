@@ -1,0 +1,44 @@
+﻿@model Multicarbono.Models.Cliente.Cliente
+
+@Html.Partial("_Menu")
+
+<hr />
+<h6 style="margin-left:10%">Alterar Cliente</h6>
+<br />
+<br />
+
+<div class="row" style="margin-left:10%; margin-top:auto">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <input type="hidden" asp-for="IdCliente" />
+            <div class="form-group">
+                <label asp-for="CNPJ" class="control-label"></label>
+                <input asp-for="CNPJ" class="form-control" required/>
+            </div>
+            <div class="form-group">
+                <label asp-for="RazaoSocial" class="control-label"></label>
+                <input asp-for="RazaoSocial" class="form-control" required/>
+            </div>
+            <div class="form-group">
+                <label asp-for="NomeFantasia" class="control-label"></label>
+                <input asp-for="NomeFantasia" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="IE" class="control-label"></label>
+                <input asp-for="IE" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Saldo" class="control-label"></label>
+                <input asp-for="Saldo" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Situacao" class="control-label"></label>
+                <select asp-for="Situacao" asp-items="Html.GetEnumSelectList<Multicarbono.Models.Enum.SituacaoCliente>()" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-info" />
+            </div>
+        </form>
+    </div>
+</div>
+

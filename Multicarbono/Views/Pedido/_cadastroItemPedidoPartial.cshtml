@@ -1,0 +1,32 @@
+﻿@model Multicarbono.ViewModels.ItemPedidoViewModel
+
+@Html.Partial("_Menu")
+
+<hr />
+<h6 style="margin-left:10%">Inserir item</h6>
+<br />
+<br />
+<div class="row" style="margin-left:10%">
+    <div class="col-md-4">
+        <form asp-action="CadastroItemPedido">
+            <div class="form-group">
+                <input asp-for="ItemPedido.IdPedido" class="form-control" readonly hidden/>
+            </div>
+            <div class="form-group">
+                <label asp-for="ItemPedido.IdProduto" class="control-label"></label>
+                <select asp-for="ItemPedido.IdProduto" asp-items="@Model.Produto" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ItemPedido.CFOP" class="control-label"></label>
+                <input asp-for="ItemPedido.CFOP" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ItemPedido.QTDE" class="control-label"></label>
+                <input asp-for="ItemPedido.QTDE" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-info" />
+            </div>
+        </form>
+    </div>
+</div>

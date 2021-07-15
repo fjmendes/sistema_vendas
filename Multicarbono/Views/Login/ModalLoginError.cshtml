@@ -1,0 +1,17 @@
+﻿
+
+@using (Html.BeginForm("Index", "Login", FormMethod.Post, new {@id = "ModalLoginError", @onsubmit = "index()" }))
+{
+<div class="modal-dialog modal-sm" role="dialog">
+    <div class="modal-content">
+        <div class="modal-body">
+            <h3>
+                Usuário ou senha incorretos
+            </h3>
+            <span>
+                <button type="submit" id="btnLoginError" style="margin-left:auto">Ok</button>
+            </span>
+        </div>
+    </div>
+</div>
+}

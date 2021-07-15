@@ -1,0 +1,56 @@
+﻿@model Multicarbono.Models.Usuario.Usuario
+
+@Html.Partial("_Menu")
+
+<hr />
+<h6 style="margin-left:10%">Alterar Usuário</h6>
+<br />
+<br />
+
+<div class="row" style="margin-left:10%; margin-top:auto">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <input type="hidden" asp-for="IdUsuario" />
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" required/>
+            </div>
+            <div class="form-group">
+                <label asp-for="DtNascimento" class="control-label"></label>
+                <input asp-for="DtNascimento" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Cargo" class="control-label"></label>
+                <input asp-for="Cargo" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Endereco" class="control-label"></label>
+                <input asp-for="Endereco" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Login" class="control-label"></label>
+                <input asp-for="Login" class="form-control" readonly/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Ativo" class="control-label"></label>
+                <input asp-for="Ativo" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="NivelAcesso" class="control-label"></label>
+                <select asp-for="NivelAcesso" asp-items="Html.GetEnumSelectList<Multicarbono.Models.Enum.NivelAcesso>()" class="form-control" readonly></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Senha" class="control-label"></label>
+                <input asp-for="Senha" type="password" class="form-control" required/>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-info" />
+            </div>
+        </form>
+    </div>
+</div>
+
